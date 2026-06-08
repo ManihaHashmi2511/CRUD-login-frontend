@@ -25,7 +25,7 @@ const Signup = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      await axios.post('http://localhost:5000/api/users/signup', formData)
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/users/signup`, formData)
       Swal.fire({
         icon: 'success',
         title: 'Account Created!',
